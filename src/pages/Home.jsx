@@ -173,21 +173,6 @@ const Home = () => {
             <ChevronRight size={24} className="md:w-8 md:h-8" />
           </button>
 
-          {/* Carousel Indicators */}
-          <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-4 z-20">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border-2 border-white/80 ${
-                  index === currentSlide
-                    ? "bg-[#EF6D1A] scale-110 shadow-lg"
-                    : "bg-white/40 hover:bg-white/60"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </section>
       <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8">
@@ -198,19 +183,19 @@ const Home = () => {
           <img src="./texture.png" alt="" className="w-full" />
         </div>
         <h1 className="text-[#EF6D1A] text-2xl sm:text-3xl md:text-4xl lg:text-[50px] text-center px-4 sm:px-8 md:px-12 pt-6 relative z-10 font-semibold">
-          Let's grow something great together season after season, generation
+          Let's grow something great together season after<br/> season, generation
           after generation.
         </h1>
       </section>
 
       {/* Processes, Technology, Quality Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 md:py-12 lg:py-16 bg-white px-4 sm:px-6 md:px-12 xl:px-35">
+        <div >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Side - Content */}
             <div className="w-full col-span-1 lg:col-span-2 flex flex-col justify-between space-y-6 md:space-y-8">
               {/* Tab Buttons */}
-              <div className="flex flex-wrap gap-2 sm:gap-4 justify-center lg:justify-start">
+              <div className="flex  gap-2 sm:gap-4 justify-center lg:justify-start">
                 {Object.keys(tabData).map((tab) => (
                   <button
                     key={tab}
@@ -245,7 +230,7 @@ const Home = () => {
                 </div>
               )}
 
-              <div className="px-4 md:px-8">
+              <div >
                 <p className="text-black/65 text-center leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[25px]">
                   {tabData[activeProcessTab].description}
                 </p>
@@ -274,14 +259,14 @@ const Home = () => {
 
       {/* Managing Director Section */}
       <section
-        className="relative px-4 sm:px-6 lg:px-8 xl:px-35 mt-12 md:mt-20 py-8 md:py-12"
+        className="relative mx-4 sm:mx-6 lg:mx-8 xl:mx-35 mt-12 md:mt-20 py-8 md:py-12"
         style={{
           backgroundImage: "url(./building.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative ">
           {/* First Row - Person image and initial text */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
             <div className="flex justify-center w-[180px] sm:w-[220px] md:w-[255px] mb-6 md:mb-0">
@@ -353,7 +338,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12 bg-white">
+      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12 bg-white mt-24">
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-6 md:mb-8">
           Harvesting Success:{" "}
           <span className="font-bold text-[#EF6D1A]">

@@ -7,7 +7,7 @@ const Footer = () => {
         <img
           src="./logo.png"
           alt="logo"
-          className=" xl:px-35 sm:px-12  h-13 mb-8 sm:mb-2 mx-auto sm:mx-0 "
+          className="px-4 sm:px-6 md:px-12 xl:px-35 h-13 mb-8 sm:mb-2  sm:mx-0 "
         />
         <div className="xl:px-35 sm:px-12 w-[300px] sm:w-auto mx-auto  sm:flex flex-col sm:flex-row items-center justify-between gap-8">
           {/* Left Section */}

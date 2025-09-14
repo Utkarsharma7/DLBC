@@ -101,10 +101,10 @@ const Products = () => {
     <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-8 lg:py-12 bg-white">
       <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[45px] font-bold text-center mb-6 md:mb-8">
         Explore <span className="text-[#EF6D1A]">Dhanlakshmi Biochem</span>{" "}
-        Range of Revolutionising Agri Products
+        Range of<br/> Revolutionising Agri Products
       </h1>
 
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-14">
+      <div className="px-2 sm:px-4 md:px-6 lg:px-14">
         <div className="relative">
           {/* Product Content */}
           <div>

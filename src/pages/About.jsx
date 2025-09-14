@@ -4,10 +4,10 @@ import Testimonal from "../components/Testimonal";
 const About = () => {
   return (
     <div className="pt-16">
-      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-6 sm:py-8 md:py-12 bg-white relative z-10 min-h-screen">
-        <div className="relative z-10 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-6 sm:py-8 md:py-12 bg-white relative z-10">
+        <div className="relative z-10 ">
           {/* Desktop and Tablet Layout with floating images */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ">
             {/* First set of images floating right */}
             <div className="float-right ml-4 lg:ml-6 mb-4 lg:mb-6 space-y-3 lg:space-y-4 w-64 lg:w-80 xl:w-96">
               <img

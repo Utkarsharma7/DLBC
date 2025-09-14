@@ -19,7 +19,7 @@ const Products = () => {
           <span className="text-[#EF6D1A]">Dhanlakshmi Biochem</span> Range of
           Revolutionising Agri Products
         </h1>
-        <div className="max-w-7xl grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {productsData.map((product, index) => (
             <div
               key={index}
