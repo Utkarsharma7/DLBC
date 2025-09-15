@@ -140,7 +140,7 @@ const Products = () => {
               {/* Left Navigation Button */}
               <button
                 onClick={prevProduct}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 sm:-translate-x-6 md:-translate-x-8 lg:-translate-x-12 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 sm:-translate-x-6 md:-translate-x-8 lg:-translate-x-12 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all cursor-pointer"
               >
                 <ChevronLeft
                   size={32}
@@ -151,7 +151,7 @@ const Products = () => {
               {/* Right Navigation Button */}
               <button
                 onClick={nextProduct}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 sm:translate-x-6 md:translate-x-8 lg:translate-x-12 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 sm:translate-x-6 md:translate-x-8 lg:translate-x-12 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all cursor-pointer"
               >
                 <ChevronRight
                   size={32}
@@ -172,7 +172,7 @@ const Products = () => {
               <div className="bg-black/25 rounded-lg w-full">
                 <button
                   onClick={toggleAccordion}
-                  className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center transition-colors rounded-lg"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center transition-colors rounded-lg cursor-pointer"
                 >
                   <span className="font-semibold text-base md:text-lg">
                     Know More
@@ -202,7 +202,7 @@ const Products = () => {
                     setCurrentProductIndex(index);
                     setActiveAccordion(null);
                   }}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
                     index === currentProductIndex
                       ? "bg-[#EF6D1A]"
                       : "bg-gray-300"

@@ -43,7 +43,7 @@ const Footer = () => {
               <h3 className="font-semibold mb-2">EMAIL</h3>
               <p className="text-gray-200">dhanlakshmibiochem@gmail.com</p>
             </div> 
-            <Link to="/legal-info" className="underline hover:text-blue-400 active:text-blue-600 focus:outline-none">Legal Information</Link>
+            <Link to="/legal-info" className="underline hover:text-blue-400 active:text-blue-600 focus:outline-none cursor-pointer">Legal Information</Link>
           </div>
           {/* Right Section */}
           <div className="flex-1 max-w-[400px] space-y-6">
@@ -69,7 +69,7 @@ const Footer = () => {
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="text-white bg-[#EF6D1A] px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition"
+                    className="text-white bg-[#EF6D1A] px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition cursor-pointer"
                   >
                     Submit
                   </button>

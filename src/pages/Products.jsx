@@ -42,7 +42,7 @@ const Products = () => {
                 <div className="bg-black/25 rounded-lg w-full">
                   <button
                     onClick={() => toggleAccordion(product.id)}
-                    className="w-full px-6 py-1 text-left flex justify-between items-center transition-colors"
+                    className="w-full px-6 py-1 text-left flex justify-between items-center transition-colors cursor-pointer"
                   >
                     <span className="font-semibold text-lg">Know More</span>
                     {activeAccordion[product.id] === "knowMore" ? (

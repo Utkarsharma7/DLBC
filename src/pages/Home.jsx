@@ -162,13 +162,13 @@ const Home = () => {
           {/* Carousel Controls */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-[#EF6D1A] text-white p-2 md:p-3 rounded-full transition-all duration-300 z-20 backdrop-blur-sm"
+            className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-[#EF6D1A] text-white p-2 md:p-3 rounded-full transition-all duration-300 z-20 backdrop-blur-sm cursor-pointer"
           >
             <ChevronLeft size={24} className="md:w-8 md:h-8" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-[#EF6D1A] text-white p-2 md:p-3 rounded-full transition-all duration-300 z-20 backdrop-blur-sm"
+            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/30 hover:bg-[#EF6D1A] text-white p-2 md:p-3 rounded-full transition-all duration-300 z-20 backdrop-blur-sm cursor-pointer"
           >
             <ChevronRight size={24} className="md:w-8 md:h-8" />
           </button>

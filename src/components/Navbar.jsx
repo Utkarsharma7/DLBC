@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0 cursor-pointer">
               <img
                 className="h-8 w-auto"
                 src="./logo.png"
@@ -36,11 +36,11 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-gray-700 hover:text-green-600 lg:px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
+            <Link
+              key={item.name}
+              to={item.path}
+              className="text-gray-700 hover:text-green-600 lg:px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+            >
                 {item.name}
               </Link>
             ))}
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600"
+              className="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600 cursor-pointer"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 hover:text-green-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-green-600 block px-3 py-2 text-base font-medium transition-colors duration-200 cursor-pointer"
                 onClick={toggleMenu}
               >
                 {item.name}
