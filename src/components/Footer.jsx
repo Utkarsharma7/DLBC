@@ -1,7 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Footer = () => {
-  const navigate = useNavigate();
   return (
     <>
       <section className="bg-black/90 text-white pt-8 pb-4">
@@ -44,7 +43,7 @@ const Footer = () => {
               <h3 className="font-semibold mb-2">EMAIL</h3>
               <p className="text-gray-200">dhanlakshmibiochem@gmail.com</p>
             </div> 
-            <button onClick={()=>navigate("/legal-info")}>Legal Information</button>
+            <Link to="/legal-info" className="underline hover:text-blue-400 active:text-blue-600 focus:outline-none">Legal Information</Link>
           </div>
           {/* Right Section */}
           <div className="flex-1 max-w-[400px] space-y-6">

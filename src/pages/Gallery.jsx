@@ -1,14 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import image1 from "../assets/1.jpg";
-import image2 from "../assets/2.jpg";
-import image3 from "../assets/3.jpg";
-import image4 from "../assets/4.jpg";
-import image5 from "../assets/5.jpg";
-import image6 from "../assets/6.jpeg";
-import image7 from "../assets/7.jpg";
-import image8 from "../assets/8.jpg";
-import image9 from "../assets/9.jpg";
+// Dynamically import all images from assets (supports jpg, jpeg, png, heic/heif)
+const imageModules = import.meta.glob("../assets/*.{jpg,jpeg,png,heic,HEIC,heif,HEIF}", {
+  eager: true,
+});
+const images = Object.entries(imageModules)
+  // sort by filename with numeric order so "img 2" < "img 10"
+  .sort((a, b) => a[0].localeCompare(b[0], undefined, { numeric: true, sensitivity: "base" }))
+  .map(([, mod]) => mod.default);
 
 // helper: track viewport size
 function useWindowSize() {
@@ -38,17 +37,7 @@ const Gallery= () => {
   const stepX = bubbleSize + spacing;
   const stepY = (Math.sqrt(3) / 2) * (bubbleSize + spacing);
 
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-  ];
+  // images array is built from glob above
 
   // --- mouse drag
   const handleMouseDown = (e) => {
