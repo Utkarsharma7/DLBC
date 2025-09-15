@@ -28,9 +28,9 @@ const Home = () => {
   ];
 
   const farmerStories = [
-    { id: 1, name: "Ramesh Kumar", place: "Punjab" },
-    { id: 2, name: "Sita Devi", place: "Uttar Pradesh" },
-    { id: 3, name: "Amit Singh", place: "Maharashtra" },
+    { id: 1, name: "Ramesh Kumar", place: "Punjab", video: "./videos/story1.mp4" },
+    { id: 2, name: "Sita Devi", place: "Uttar Pradesh", video: "./videos/story2.mp4" },
+    { id: 3, name: "Amit Singh", place: "Maharashtra", video: "./videos/story3.mp4" },
   ];
 
   // Tab data for Processes, Technology, Quality section
@@ -338,7 +338,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12 bg-white mt-24">
+      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12  mt-24 relative z-20">
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-6 md:mb-8">
           Harvesting Success:{" "}
           <span className="font-bold text-[#EF6D1A]">
@@ -351,7 +351,9 @@ const Home = () => {
               key={story.id}
               className="bg-[#EF6D1A]/30 rounded-lg overflow-hidden shadow-md"
             >
-              <div className="h-[150px] sm:h-[180px] md:h-[200px] bg-[#EF6D1A]/30 rounded-t-lg overflow-hidden w-full"></div>
+              <div className=" bg-[#EF6D1A]/30 rounded-t-lg overflow-hidden w-full">
+                <video src={story.video} controls ></video>
+              </div>
               <div className="flex flex-col justify-center items-center rounded-b-lg p-4 w-full">
                 <h3 className="font-semibold text-lg sm:text-xl md:text-[20px]">
                   {story.name}

@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import "./App.css";
 import Footer from "./components/Footer";
+import Legal from "./pages/Legal";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/legal-info" element={<Legal />} />
           </Routes>
           <img
             src="./crop.png"

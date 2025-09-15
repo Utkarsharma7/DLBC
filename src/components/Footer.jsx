@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="bg-black/90 text-white pt-8 pb-4">
@@ -24,7 +25,14 @@ const Footer = () => {
                 Ahmedabad-380015
               </p>
             </div>
-            <div>
+              <div>
+              <h3 className="font-semibold mb-2">BUSINESS HOURS</h3>
+              <p className="text-gray-200">MON to SAT : 9 AM to 7 PM</p>
+            </div>
+            
+          </div>
+          <div className="flex-1 max-w-[400px] space-y-6">
+              <div>
               <h3 className="font-semibold mb-2">PHONE</h3>
               <p className="text-gray-200">
                 +91 7226066620
@@ -35,14 +43,12 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold mb-2">EMAIL</h3>
               <p className="text-gray-200">dhanlakshmibiochem@gmail.com</p>
-            </div>
+            </div> 
+            <button onClick={()=>navigate("/legal-info")}>Legal Information</button>
           </div>
           {/* Right Section */}
           <div className="flex-1 max-w-[400px] space-y-6">
-            <div>
-              <h3 className="font-semibold mb-2">BUSINESS HOURS</h3>
-              <p className="text-gray-200">MON to SAT : 9 AM to 7 PM</p>
-            </div>
+          
             <div>
               <h3 className="font-semibold mb-2">CONNECT WITH US</h3>
               <form className="space-y-3">
