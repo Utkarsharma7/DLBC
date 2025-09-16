@@ -31,11 +31,11 @@ const Products = () => {
         </h1>
         <div className="max-w-7xl mx-auto space-y-8">
           {Array.from({ length: Math.ceil(productsData.length / 2) }, (_, rowIndex) => (
-            <div key={rowIndex} className="flex gap-8 md:flex-row flex-col">
+            <div key={rowIndex} className="flex gap-8 md:flex-row flex-col items-start">
               {productsData.slice(rowIndex * 2, (rowIndex + 1) * 2).map((product) => (
                 <div
                   key={product.id}
-                  className="flex-1 border border-[#EF6D1ABD] p-6 rounded-lg flex flex-col"
+                  className="w-full md:w-1/2 border border-[#EF6D1ABD] p-6 rounded-lg flex flex-col flex-shrink-0"
                   style={{ minHeight: '500px' }}
                 >
                   <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
@@ -48,7 +48,7 @@ const Products = () => {
                       className="mx-auto max-h-[300px] object-contain"
                     />
                   </div>
-                  <p className="text-lg text-center mb-6 flex-grow">
+                  <p className="text-lg text-center mb-6 flex-grow h-[130px] overflow-auto">
                     {product.subheading}
                   </p>
                   <div className="mt-auto">

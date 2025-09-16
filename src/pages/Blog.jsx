@@ -5,7 +5,7 @@ const Blog = () => {
     <div className="pt-0">
       <div className="xl:px-[120px] sm:px-6 lg:px-16 py-16">
         {/* Blog Post 1 */}
-        <article className=" p-8">
+        <article className=" p-8 max-w-[1500px] mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[45px] font-bold text-[#EF6D1A] mb-4 leading-tight">
             Bridging Farmers and Consumers: Marketing Insights Behind GUJCO
             MART's Success
@@ -61,7 +61,7 @@ const Blog = () => {
         </article>
 
         {/* Blog Post 2 */}
-        <article className=" rounded-lg  p-8">
+        <article className=" rounded-lg  p-8 max-w-[1500px] mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#EF6D1A] mb-4 leading-tight">
             Cultivating Progress: A Recap of Our Farmers and Dealers Awareness
             Program
@@ -120,7 +120,7 @@ const Blog = () => {
         </article>
 
         {/* Blog Post 3 */}
-        <article className="mb-20 bg-white rounded-lg p-8">
+        <article className="mb-20 bg-white rounded-lg p-8 max-w-[1500px] mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#EF6D1A] mb-4 leading-tight">
             At Farmers Meet Up
           </h2>

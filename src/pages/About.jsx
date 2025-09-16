@@ -4,7 +4,7 @@ import Testimonal from "../components/Testimonal";
 const About = () => {
   return (
     <div className="pt-16">
-      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-6 sm:py-8 md:py-12 bg-white relative z-10">
+      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-6 sm:py-8 md:py-12 bg-white relative z-10 max-w-[1500px] mx-auto">
         <div className="relative z-10 ">
           {/* Desktop and Tablet Layout with floating images */}
           <div className="hidden md:block ">

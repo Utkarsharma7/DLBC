@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <section className="bg-black/90 text-white pt-8 pb-4">
-        <img
+      <section className="bg-black/90 text-white pt-8 pb-4 ">
+      <div className="max-w-[1500px] mx-auto">
+          <img
           src="./logo.png"
           alt="logo"
           className="px-4 sm:px-6 md:px-12 xl:px-35 h-13 mb-8 sm:mb-2  sm:mx-0 "
         />
-        <div className="xl:px-35 sm:px-12 w-[300px] sm:w-auto mx-auto  sm:flex flex-col sm:flex-row items-center justify-between gap-8">
+      </div>
+      
+        <div className="xl:px-35 sm:px-12 w-[300px] sm:w-auto mx-auto  sm:flex flex-col sm:flex-row items-center justify-between gap-8 max-w-[1500px] ">
           {/* Left Section */}
           <div className="flex-1 max-w-[400px] space-y-6">
             <div>

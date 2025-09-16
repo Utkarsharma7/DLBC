@@ -40,7 +40,7 @@ const Testimonal = () => {
   return (
     <>
       {/* Where Ambition Meets Impact Section */}
-      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 sm:py-8 md:py-10 lg:py-12 bg-white">
+      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 sm:py-8 md:py-10 lg:py-12 max-w-[1500px] mx-auto">
         <div className="">
           {/* Section Header */}
           <div className="mb-8 sm:mb-12 lg:mb-16">

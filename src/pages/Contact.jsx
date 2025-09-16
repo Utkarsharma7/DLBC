@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <div className="pt-16 relative z-10">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-8 xl:px-35">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-[1500px] mx-auto">
           {/* Left Section - Information */}
           <div className="space-y-8">
             <div>
@@ -174,7 +174,7 @@ const Contact = () => {
         </div>
 
         {/* Locations Section */}
-        <div className="mt-20">
+        <div className="mt-20 max-w-[1500px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Section - Map */}
             <div className="h-[500px] rounded-lg overflow-hidden shadow-lg">

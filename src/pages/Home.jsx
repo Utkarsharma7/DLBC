@@ -122,7 +122,7 @@ const Home = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 ">
       {/* Hero Section with Video */}
       <section className="relative overflow-hidden bg-black">
         <div
@@ -175,7 +175,7 @@ const Home = () => {
 
         </div>
       </section>
-      <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8">
+      <section className="relative w-full px-4 sm:px-6 lg:px-8 py-8 ">
         <div className="absolute z-0 top-0 left-0 w-[120px] sm:w-[180px] md:w-[240px]">
           <img src="./texture.png" alt="" className="w-full" />
         </div>
@@ -189,7 +189,7 @@ const Home = () => {
       </section>
 
       {/* Processes, Technology, Quality Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-white px-4 sm:px-6 md:px-12 xl:px-35">
+      <section className="py-8 md:py-12 lg:py-16 bg-white px-4 sm:px-6 md:px-12 xl:px-35 max-w-[1500px] mx-auto">
         <div >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Left Side - Content */}
@@ -259,7 +259,7 @@ const Home = () => {
 
       {/* Managing Director Section */}
       <section
-        className="relative mx-4 sm:mx-6 lg:mx-8 xl:mx-35 mt-12 md:mt-20 py-8 md:py-12"
+        className="relative mx-4 sm:mx-6 lg:mx-8 xl:mx-35 mt-12 md:mt-20 py-8 md:py-12 max-w-[1500px] 2xl:mx-auto 2xl:px-35"
         style={{
           backgroundImage: "url(./building.png)",
           backgroundSize: "cover",
@@ -338,7 +338,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12  mt-24 relative z-20">
+      <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-12  mt-24 relative z-20 max-w-[1500px] mx-auto">
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-6 md:mb-8">
           Harvesting Success:{" "}
           <span className="font-bold text-[#EF6D1A]">
