@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Products from "../components/Products";
 const Home = () => {
@@ -12,18 +12,22 @@ const Home = () => {
     {
       video: "./videos/Media1.mp4",
       image: "/images/slide1.jpg",
+      text: "GROW MORE.\nWASTE LESS.\nHARVEST SUCCESS."
     },
     {
       video: "./videos/Media2.mp4",
       image: "/images/slide2.jpg",
+      text: "NOURISHING YOUR CROPS.\nEMPOWERING YOUR YIELD."
     },
     {
       video: "./videos/Media3.mp4",
       image: "/images/slide3.jpg",
+      text: "SUSTAINABLE FERTILIZERS\nFOR A GREENER TOMORROW."
     },
     {
       video: "./videos/Media4.mp4",
       image: "/images/slide4.jpg",
+      text: "INNOVATIVE NUTRITION\nFOR HEALTHIER FIELDS."
     },
   ];
 
@@ -148,11 +152,12 @@ const Home = () => {
               <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black/20">
                 <div className="w-full px-4">
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight drop-shadow-lg" style={{ fontFamily: 'Marcellus, serif' }}>
-                    GROW MORE.
-                    <br />
-                    WASTE LESS.
-                    <br />
-                    HARVEST SUCCESS.
+                    {slide.text.split('\n').map((line, lineIndex) => (
+                      <React.Fragment key={lineIndex}>
+                        {line}
+                        {lineIndex < slide.text.split('\n').length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
                   </h1>
                 </div>
               </div>

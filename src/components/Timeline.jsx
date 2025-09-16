@@ -97,15 +97,15 @@ const Timeline = () => {
                     <div
                       className={`absolute text-xs ${
                         item.position === "up"
-                          ? "bottom-1/2 mb-10"
-                          : "top-1/2 mt-11"
+                          ? "bottom-1/2 mb-2 md:mb-2 lg:mb-7 xl:mb-10"
+                          : "top-1/2 mt-2 lg:mt-7 xl:mb-10"
                       }`}
                       style={{
                         left: "70px",
                       }}
                     >
-                      <div className="text-left space-y-1 xl:min-w-[100px]">
-                        <p className="font-semibold">
+                      <div className="text-center space-y-1 xl:min-w-[100px]">
+                        <p className="font-semibold text-xs">
                           {item.marketShare} Market Share
                         </p>
                       </div>

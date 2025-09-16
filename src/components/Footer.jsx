@@ -14,7 +14,7 @@ const Footer = () => {
       
         <div className="xl:px-35 sm:px-12 w-[300px] sm:w-auto mx-auto  sm:flex flex-col sm:flex-row items-center justify-between gap-8 max-w-[1500px] ">
           {/* Left Section */}
-          <div className="flex-1 max-w-[400px] space-y-6">
+          <div className="flex-1 max-w-[400px] space-y-6 mb-3">
             <div>
               <h3 className="font-semibold text-[18px] mb-2">ADDRESS</h3>
               <p className="text-[18px]">
@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="flex-1 max-w-[400px] space-y-6">
               <div>
               <h3 className="font-semibold mb-2">PHONE</h3>
-              <p className="text-gray-200">
+              <p className="text-gray-200 mb-0">
                 +91 7226066620
                 <br />
                 +91 9825380895
