@@ -147,7 +147,7 @@ const Home = () => {
               {/* Video Overlay Content */}
               <div className="absolute inset-0 flex items-center justify-center text-center text-white bg-black/20">
                 <div className="w-full px-4">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight drop-shadow-lg" style={{ fontFamily: 'Marcellus, serif' }}>
                     GROW MORE.
                     <br />
                     WASTE LESS.
@@ -356,10 +356,10 @@ const Home = () => {
               </div>
               <div className="flex flex-col justify-center items-center rounded-b-lg p-4 w-full">
                 <h3 className="font-semibold text-lg sm:text-xl md:text-[20px]">
-                  {story.name}
+                 
                 </h3>
                 <p className="text-base sm:text-lg md:text-[20px]">
-                  {story.place}
+                
                 </p>
               </div>
             </div>

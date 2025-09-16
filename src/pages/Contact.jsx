@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <div className="pt-16 relative z-10">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-8 xl:px-35">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Section - Information */}
           <div className="space-y-8">

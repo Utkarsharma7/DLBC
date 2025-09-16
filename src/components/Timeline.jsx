@@ -84,11 +84,11 @@ const Timeline = () => {
                           : "top-1/2 mt-20"
                       }`}
                       style={{
-                        left: "50%",
+                        left: "79%",
                         transform: "translateX(-50%)",
                       }}
                     >
-                      <div className="bg-[#EF6D1A] text-white px-3 py-2 rounded text-center font-semibold whitespace-nowrap text-sm">
+                      <div className="bg-[#EF6D1A] text-black px-3 py-2 rounded text-center font-semibold whitespace-nowrap text-sm">
                         {item.year}
                       </div>
                     </div>
@@ -97,8 +97,8 @@ const Timeline = () => {
                     <div
                       className={`absolute text-xs ${
                         item.position === "up"
-                          ? "bottom-1/2 mb-4"
-                          : "top-1/2 mt-4"
+                          ? "bottom-1/2 mb-10"
+                          : "top-1/2 mt-11"
                       }`}
                       style={{
                         left: "70px",

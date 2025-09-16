@@ -3,7 +3,7 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="pt-0">
-      <div className="xl:px-35 sm:px-6 lg:px-16 py-16">
+      <div className="xl:px-[120px] sm:px-6 lg:px-16 py-16">
         {/* Blog Post 1 */}
         <article className=" p-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[45px] font-bold text-[#EF6D1A] mb-4 leading-tight">
