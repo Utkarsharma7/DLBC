@@ -17,11 +17,9 @@ const Products = () => {
       <section 
         className="lg:px-35 md:px-12 px-6 md:py-12 py-8 relative"
         style={{
-          backgroundImage: "url(./image60.jpg)",
+          backgroundImage: "url('./image 60.jpg')",
           backgroundSize: "contain",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          minHeight: "100vh",
           backgroundColor: "#f8f9fa"
         }}
       >
@@ -31,7 +29,7 @@ const Products = () => {
         </h1>
         <div className="max-w-7xl mx-auto space-y-8">
           {Array.from({ length: Math.ceil(productsData.length / 2) }, (_, rowIndex) => (
-            <div key={rowIndex} className="flex gap-8 md:flex-row flex-col items-start">
+            <div key={rowIndex} className="flex gap-8 md:flex-row flex-col items-start" >
               {productsData.slice(rowIndex * 2, (rowIndex + 1) * 2).map((product) => (
                 <div
                   key={product.id}

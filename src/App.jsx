@@ -28,7 +28,7 @@ function App() {
           <img
             src="./crop.png"
             alt=""
-            className="absolute bottom-0 opacity-80"
+            className="absolute bottom-0 opacity-80 w-full max-h-100"
           />
         </div>
 
