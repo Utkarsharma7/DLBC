@@ -143,6 +143,7 @@ const Home = () => {
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 muted
+                playsInline
                 className="w-full h-full object-cover"
               >
                 <source src={slide.video} type="video/mp4" />
@@ -188,7 +189,7 @@ const Home = () => {
           <img src="./texture.png" alt="" className="w-full" />
         </div>
         <h1 className="text-[#EF6D1A] text-2xl sm:text-3xl md:text-4xl lg:text-[50px] text-center px-4 sm:px-8 md:px-12 pt-6 relative z-10 font-semibold">
-          Let's grow something great together season after<br/> season, generation
+          Let's grow something great together, season after<br/> season, generation
           after generation.
         </h1>
       </section>
@@ -271,7 +272,9 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="relative ">
+        {/* Background overlay to reduce opacity */}
+        <div className="absolute inset-0 bg-white opacity-80"></div>
+        <div className="relative z-10">
           {/* First Row - Person image and initial text */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
             <div className="flex justify-center w-[180px] sm:w-[220px] md:w-[255px] mb-6 md:mb-0">
@@ -357,7 +360,7 @@ const Home = () => {
               className="bg-[#EF6D1A]/30 rounded-lg overflow-hidden shadow-md"
             >
               <div className=" bg-[#EF6D1A]/30 rounded-t-lg overflow-hidden w-full">
-                <video src={story.video} controls ></video>
+                <video src={story.video} controls playsInline ></video>
               </div>
               <div className="flex flex-col justify-center items-center rounded-b-lg p-4 w-full">
                 <h3 className="font-semibold text-lg sm:text-xl md:text-[20px]">

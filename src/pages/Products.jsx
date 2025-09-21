@@ -24,17 +24,15 @@ const Products = () => {
         }}
       >
         <h1 className="md:text-[45px] text-2xl font-bold text-center mb-8">
-          <span className="text-[#EF6D1A]">Dhanlakshmi Biochem</span> Range of
-          Revolutionising Agri Products
+          Range of our <span className="text-[#EF6D1A]">Revolutionising Agri Products</span>
         </h1>
         <div className="max-w-7xl mx-auto space-y-8">
           {Array.from({ length: Math.ceil(productsData.length / 2) }, (_, rowIndex) => (
-            <div key={rowIndex} className="flex gap-8 md:flex-row flex-col items-start" >
+            <div key={rowIndex} className="grid gap-8 md:grid-cols-2 grid-cols-1 items-stretch">
               {productsData.slice(rowIndex * 2, (rowIndex + 1) * 2).map((product) => (
                 <div
                   key={product.id}
-                  className="w-full md:w-1/2 border border-[#EF6D1ABD] p-6 rounded-lg flex flex-col flex-shrink-0"
-                  style={{ minHeight: '500px' }}
+                  className="border border-[#EF6D1ABD] p-6 rounded-lg flex flex-col"
                 >
                   <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
                     {product.heading}
@@ -46,7 +44,7 @@ const Products = () => {
                       className="mx-auto max-h-[300px] object-contain"
                     />
                   </div>
-                  <p className="text-lg text-center mb-6 flex-grow h-[130px] overflow-auto">
+                  <p className="text-lg text-center mb-6 flex-grow">
                     {product.subheading}
                   </p>
                   <div className="mt-auto">

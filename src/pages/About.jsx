@@ -1,6 +1,7 @@
 import Timeline from "../components/Timeline";
 import Testimonal from "../components/Testimonal";
-
+import MapImage from "../assets/Map.png";
+import WatermarkImage from "../assets/watermark.png";
 const About = () => {
   return (
     <div className="pt-16">
@@ -169,15 +170,48 @@ const About = () => {
           </div>
         </div>
 
-        {/* Background building image - responsive positioning */}
+        {/* Background watermark image - responsive positioning */}
         <img
-          src="./building.png"
+          src={WatermarkImage}
           alt=""
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-0 opacity-60 md:opacity-80 w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-0 opacity-60 md:opacity-80 w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl h-auto"
         />
       </section>
 
+      {/* Media5 Video Section */}
+      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-8 sm:py-12 md:py-16 max-w-[1500px] mx-auto">
+       
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 aspect ratio */}
+            <video
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg border-0"
+              controls
+              preload="metadata"
+              playsInline
+              style={{ border: 'none', outline: 'none' }}
+            >
+              <source src="./videos/Media5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+      
       <Testimonal />
+      
+      {/* Map Section */}
+      <section className="px-4 sm:px-6 md:px-12 lg:px-35 py-8 sm:py-12 md:py-16 max-w-[1500px] mx-auto">
+       
+        <div className="max-w-6xl mx-auto">
+          <img
+            src={MapImage}
+            alt="Company Location Map"
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
+      
       <Timeline />
     </div>
   );

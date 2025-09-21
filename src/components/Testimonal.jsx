@@ -43,8 +43,8 @@ const Testimonal = () => {
       <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 sm:py-8 md:py-10 lg:py-12 max-w-[1500px] mx-auto">
         <div className="">
           {/* Section Header */}
-          <div className="mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-bold mb-2 sm:mb-4 text-[#EF6D1A] text-center">
+          <div className="mb-8 sm:mb-12 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-bold mb-5 sm:mb-4 text-[#EF6D1A] text-center">
               Our Leadership
             </h2>
           </div>

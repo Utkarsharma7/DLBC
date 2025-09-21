@@ -9,11 +9,12 @@ import Contact from "./pages/Contact";
 import "./App.css";
 import Footer from "./components/Footer";
 import Legal from "./pages/Legal";
-
+import { ScrollToTop } from "./ScrollToTop";
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
         <div className="relative">
           <Routes>

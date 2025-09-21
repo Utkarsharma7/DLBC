@@ -8,7 +8,7 @@ const Blog = () => {
         <article className=" p-8 max-w-[1500px] mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[45px] font-bold text-[#EF6D1A] mb-4 leading-tight">
             Bridging Farmers and Consumers: Marketing Insights Behind GUJCO
-            MART's Success
+            MASOL's Success
           </h2>
           <p className="text-base sm:text-lg text-[#EF6D1A] font-semibold mb-6">
             Thailand - June 2024
@@ -20,7 +20,7 @@ const Blog = () => {
               <div className="float-right ml-12 mb-4 space-y-4 xl:w-6/13 w-5/12">
                 <img
                   src="./image 70.png"
-                  alt="GUJCO MART Marketing Event"
+                  alt="GUJCO MASOL Marketing Event"
                   className="w-full h-auto aspect-[645/250] object-cover "
                 />
                 <img
@@ -35,7 +35,7 @@ const Blog = () => {
             <div className="lg:hidden mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
                 src="./image 70.png"
-                alt="GUJCO MART Marketing Event"
+                alt="GUJCO MASOL Marketing Event"
                 className="w-full h-auto aspect-[645/250] object-cover"
               />
               <img
@@ -52,7 +52,7 @@ const Blog = () => {
                 They shared analytics-driven insights about consumer behavior,
                 emerging market trends, and effective communication channels to
                 reach both farmers and end-consumers through platforms like
-                GUJCO MART —our revolutionary platform connecting farmers
+                GUJCO MASOL —our revolutionary platform connecting farmers
                 directly with consumers.
               </p>
             </div>

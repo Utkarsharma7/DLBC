@@ -100,8 +100,7 @@ const Products = () => {
   return (
     <section className="px-4 sm:px-6 md:px-12 xl:px-35 py-6 md:py-8 lg:py-12 max-w-[1500px] mx-auto">
       <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[45px] font-bold text-center mb-6 md:mb-8">
-        Explore <span className="text-[#EF6D1A]">Dhanlakshmi Biochem</span>{" "}
-        Range of<br/> Revolutionising Agri Products
+        Range of our<br/> <span className="text-[#EF6D1A]">Revolutionising Agri Products</span>
       </h1>
 
       <div className="px-2 sm:px-4 md:px-6 lg:px-14">
