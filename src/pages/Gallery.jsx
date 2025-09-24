@@ -41,31 +41,33 @@ function useWindowSize() {
   return size;
 }
 
-
 const Bubble = React.memo(({ bubble, bubbleSize, focus, scale, onImageClick }) => {
   // Don't render if no image
   if (!bubble.img) {
     return null;
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Bubble clicked:', bubble.img); // Debug log
+    onImageClick(bubble.img);
+  };
+
   return (
     <div
-      className="absolute rounded-full overflow-hidden shadow-md will-change-transform cursor-pointer image-bubble"
+      className="absolute rounded-full overflow-hidden shadow-md cursor-pointer image-bubble hover:shadow-lg transition-shadow"
       style={{
         left: bubble.x,
         top: bubble.y,
         width: bubbleSize,
         height: bubbleSize,
         transform: `scale(${scale})`,
-        transition: "transform 0.1s linear",
-        zIndex: 10, // Ensure bubbles are above other elements
+        transition: "transform 0.1s linear, shadow 0.2s ease",
+        zIndex: 10 + Math.floor(scale * 5), // Dynamic z-index based on scale, but below modal
+        pointerEvents: 'auto',
       }}
-      onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('Bubble clicked:', bubble.img); // Debug log
-        onImageClick(bubble.img);
-      }}
+      onClick={handleClick}
       onMouseDown={(e) => {
         e.stopPropagation(); // Prevent drag from starting
       }}
@@ -76,10 +78,11 @@ const Bubble = React.memo(({ bubble, bubbleSize, focus, scale, onImageClick }) =
       <img
         src={bubble.img}
         alt=""
-        className="w-full h-full object-cover select-none pointer-events-none"
+        className="w-full h-full object-cover select-none"
         loading="lazy"
         decoding="async"
         draggable={false}
+        style={{ pointerEvents: 'none' }}
       />
     </div>
   );
@@ -95,7 +98,6 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const dragStart = useRef(null);
   const animationFrame = useRef(null);
-  // Images are now loaded directly from the module imports
 
   const isMobile = w < 768; // Tailwind "md" breakpoint
   const bubbleSize = isMobile ? 80 : 120;
@@ -106,7 +108,7 @@ const Gallery = () => {
     const stepX = bubbleSize + spacing;
     const stepY = (Math.sqrt(3) / 2) * (bubbleSize + spacing);
     const cols = Math.ceil(w / stepX) + 2;
-    const rows = Math.ceil(h / stepY) + 2;
+    const rows = Math.ceil(h / stepY) + 1; // Reduced by 1 row
     return { stepX, stepY, cols, rows };
   }, [bubbleSize, spacing, w, h]);
 
@@ -124,6 +126,10 @@ const Gallery = () => {
   const handleMouseDown = useCallback((e) => {
     // Don't start dragging if clicking on an image bubble
     if (e.target.closest('.image-bubble')) {
+      return;
+    }
+    // Also check if we're clicking on the bubble container itself
+    if (e.target.classList.contains('image-bubble')) {
       return;
     }
     setIsDragging(true);
@@ -148,6 +154,10 @@ const Gallery = () => {
   const handleTouchStart = useCallback((e) => {
     // Don't start dragging if touching an image bubble
     if (e.target.closest('.image-bubble')) {
+      return;
+    }
+    // Also check if we're touching the bubble container itself
+    if (e.target.classList.contains('image-bubble')) {
       return;
     }
     if (e.touches[0]) {
@@ -188,18 +198,17 @@ const Gallery = () => {
     };
   }, [handleMouseUp, handleMouseMove, handleTouchEnd]);
 
-
-  // Memoize bubbles calculation - only recalculate when dependencies change
+  // Memoize bubbles calculation - restored to original layout
   const visibleBubbles = useMemo(() => {
     const bubbles = [];
     const baseX = worldOffset.x % stepX;
     const baseY = worldOffset.y % stepY;
     
-    // Increase margin to ensure all bubbles are rendered and clickable
-    const margin = bubbleSize * 4; // Increased margin for better coverage
+    // Increased margin to ensure all bubbles are rendered and clickable
+    const margin = bubbleSize * 2; // Reduced margin for better performance
     
-    for (let row = -rows; row < rows; row++) {
-      for (let col = -cols; col < cols; col++) {
+    for (let row = -rows; row < rows * 2; row++) {
+      for (let col = -cols; col < cols * 2; col++) {
         const x = col * stepX + (row % 2 === 0 ? 0 : stepX / 2) + baseX - stepX;
         const y = row * stepY + baseY - stepY;
         
@@ -213,9 +222,13 @@ const Gallery = () => {
         const len = Math.max(1, images.length);
         const safeIndex = ((linearIndex % len) + len) % len;
         const img = images[safeIndex] ?? "";
-        bubbles.push({ id: `${row}-${col}`, x, y, img });
+        
+        if (img) { // Only add bubbles with valid images
+          bubbles.push({ id: `${row}-${col}`, x, y, img });
+        }
       }
     }
+    console.log('Total bubbles rendered:', bubbles.length); // Debug log
     return bubbles;
   }, [worldOffset, stepX, stepY, cols, rows, bubbleSize, w, h, images]);
 
@@ -238,8 +251,9 @@ const Gallery = () => {
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
-      style={{ willChange: 'transform' }} // GPU acceleration hint
+      style={{ willChange: 'transform' }}
     >
+      {/* Render all bubbles with proper pointer events */}
       {visibleBubbles.map((bubble) => {
         const dx = focus.x - (bubble.x + bubbleSize / 2);
         const dy = focus.y - (bubble.y + bubbleSize / 2);
@@ -261,7 +275,8 @@ const Gallery = () => {
       {/* Image Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 backdrop-blur-md bg-white bg-opacity-20 flex items-center justify-center z-50 p-4 overflow-auto"
+          className="fixed inset-0 backdrop-blur-md bg-white bg-opacity-20 flex items-center justify-center p-4 overflow-auto"
+          style={{ zIndex: 9999 }}
           onClick={closeModal}
         >
           <div className="relative max-w-6xl w-full my-8">

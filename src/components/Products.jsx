@@ -9,13 +9,17 @@ export const productsData = [
   {
     id: 1,
     heading: "Dhanwan Boro Zinc GSSP",
-    img1: "./image59.png",
+    img1: "./image 59.png",
     img2: "./image29.png",
     img3: "./image62.png",
     subheading:
       "Boro Zinc GSSP is the preferred choice for progressive farmers seeking complete crop nourishment and soil health.",
-    knowMoreContent:
-      "Enhanced crop nutrition with superior zinc content for better growth and yield. Apply directly to soil or mix with irrigation water for optimal absorption. Use 25-50kg per hectare depending on crop type and soil conditions.",
+    knowMoreContent: `Boro Zinc GSSP offers balanced nutrients: 16% phosphate (14.5% water soluble), 11% sulphur,
+      19% calcium, 0.5% zinc, and 0.2% boron. It supports vigorous root and stem growth, keeps crops greener and
+      resilient to cold and disease, enhances oil content in oilseeds, and improves overall produce quality. It is
+      safe for soil pH and improves soil structure. Suitable for paddy, pulses, oilseeds, cereals, vegetables, fruits,
+      sugarcane, and cotton.
+      \nTypical application rates:\n• Paddy, Pulses: 100–150kg/acre\n• Soybean, Mustard, Groundnut, Maize, Cotton, Wheat, Vegetables: 150–200kg/acre\n• Sugarcane, Onion, Garlic, Chilli, Potato: 200–250kg/acre.`,
   },
   {
     id: 2,
@@ -48,7 +52,7 @@ export const productsData = [
     subheading:
       "Granulated Single Super Phosphate (GSSP) is a high-quality, cost-effective fertiliser supplying essential phosphorus, sulphur, and calcium for crops.",
     knowMoreContent:
-      "Contains essential trace elements like iron, manganese, and boron. Rapidly corrects micronutrient deficiencies in crops. Improves crop quality and market value significantly.",
+      "Granulated Single Super Phosphate (GSSP) is a high-quality, cost-effective fertiliser supplying essential phosphorus, sulphur, and calcium for crops. Its granulated form ensures easy handling and uniform distribution, making nutrients more readily available for healthy root development and improved yields. Perfect for a wide range of crops and especially beneficial in sulphur-deficient soils, GSSP supports balanced plant nutrition and sustainable farming practices.",
   },
   {
     id: 5,
@@ -57,9 +61,9 @@ export const productsData = [
     img2: "./image 67.png",
     img3: "./image 68.png",
     subheading:
-      ". Ideal for blending and uniform field coverage, PSSP supplies essential nutrients rapidly, supporting vigorous early plant growth.",
+      "Ideal for blending and uniform field coverage, PSSP supplies essential nutrients rapidly, supporting vigorous early plant growth.",
     knowMoreContent:
-      "Promotes faster root development and vegetative growth. Enhances plant tolerance to environmental stress factors. Maximizes fruit set and grain filling for higher yields.",
+      "Powder Single Super Phosphate is a traditional fertiliser valued for its swift solubility and effectiveness in soil preparation. Ideal for blending and uniform field coverage, PSSP supplies essential nutrients rapidly, supporting vigorous early plant growth. Its immediate availability makes it especially suitable for pre-sowing and initial crop stages, helping drive strong root systems and enhancing crop quality.",
   },
   {
     id: 6,
@@ -70,7 +74,7 @@ export const productsData = [
     subheading:
       "Zincated Granulated Single Super Phosphate (Zincated GSSP) is enriched with zinc to address micronutrient deficiencies and promote stronger, healthier crops.",
     knowMoreContent:
-      "Improves soil porosity and water retention capacity. Helps maintain optimal soil pH for nutrient availability. Promotes beneficial soil microorganisms for healthy soil ecosystem.",
+      "Zincated Granulated Single Super Phosphate (Zincated GSSP) is enriched with zinc to address micronutrient deficiencies and promote stronger, healthier crops. It improves root development, enhances chlorophyll production for better flowering and fruiting, and increases resistance to pests and diseases. This formulation also boosts oil content in oilseed crops and sugar levels in sugarcane, supporting higher yields and improved crop quality. Additionally, its granulated form ensures even nutrient distribution and longer-lasting soil availability.",
   },
 ];
 const Products = () => {
@@ -118,12 +122,14 @@ const Products = () => {
                 <img
                   src={currentProduct.img1}
                   alt={`${currentProduct.heading} - Image 1`}
-                  className="w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[280px]"
+                  className="w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[280px] border-0 outline-none ring-0 shadow-none bg-transparent"
+                  style={{ clipPath: "inset(6% 6% 6% 6%)" }}
                 />
                 <img
                   src={currentProduct.img2}
                   alt={`${currentProduct.heading} - Image 2`}
-                  className="w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[280px]"
+                  className="w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[280px] border-0 outline-none ring-0 shadow-none bg-transparent"
+                  style={{ clipPath: "inset(6% 6% 6% 6%)" }}
                 />
               </div>
 
@@ -132,7 +138,8 @@ const Products = () => {
                 <img
                   src={currentProduct.img3}
                   alt={`${currentProduct.heading} - Main Image`}
-                  className="w-full h-auto object-contain max-h-[400px] sm:max-h-[500px] md:max-h-[650px]"
+                  className="w-full h-auto object-contain max-h-[400px] sm:max-h-[500px] md:max-h-[650px] border-0 outline-none ring-0 shadow-none bg-transparent"
+                  style={{ clipPath: "inset(6% 6% 6% 6%)" }}
                 />
               </div>
 
